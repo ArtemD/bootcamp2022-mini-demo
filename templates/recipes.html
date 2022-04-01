@@ -1,0 +1,14 @@
+{% extends 'template.html' %}
+
+{% block  body %}
+
+<h1>Recipes for pan</h1>
+
+{% for recipe in recipes['results'] %}
+
+<h2>{{ recipe['title'] }}</h2>
+<img src="{{ recipe['image'] }}" alt="{{ recipe['title'] }}">
+
+{% endfor %}
+
+{% endblock  body %}
